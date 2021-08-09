@@ -5,10 +5,13 @@
 *&---------------------------------------------------------------------*
 REPORT ZDELETE_MD_REQUESTS.
 
+ "This report will delete all master data requestes.
+
 DATA: lt_requests type RSSM_T_REQUEST.
 
 PARAMETERS: pa_iobj type RSINFOPROV.
 
+ "Please validate the list before run
 SELECT request as RNR
   from RSBKREQUEST
   into table @lt_requests
